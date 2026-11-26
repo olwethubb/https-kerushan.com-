@@ -498,7 +498,11 @@ a.piece:focus-visible{outline:3px solid var(--or);outline-offset:6px}
   .tst figcaption{margin-top:6px}
   .tctl{margin-left:0;margin-top:28px}
   .ts{padding-bottom:48px}
-  .tst figure:not(.on){display:none}
-  .tst figure.on{animation:ts-in .45s ease}
 }
+
+/* testimonials: box fits the quote that is showing (all screen sizes) */
+.tst figure:not(.on){display:none}
+.tst figure.on{animation:ts-in .45s ease}
+.tst .qwrap{overflow:hidden;transition:height .4s cubic-bezier(.2,.7,.2,1)}
 @keyframes ts-in{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){.tst .qwrap{transition:none}.tst figure.on{animation:none}}

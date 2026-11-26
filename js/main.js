@@ -49,7 +49,11 @@
       var n=f.querySelector('blockquote').textContent.length;
       if(n>380){f.classList.add('long')}else if(n>250){f.classList.add('mid')}
       var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Testimonial '+(k+1)+' of '+figs.length);b.onclick=function(){go(k)};dots.appendChild(b)});
-    function go(k){i=(k+figs.length)%figs.length;figs.forEach(function(f,n){f.classList.toggle('on',n===i);f.setAttribute('aria-hidden',String(n!==i))});dots.querySelectorAll('button').forEach(function(b,n){b.classList.toggle('on',n===i);if(n===i){b.setAttribute('aria-current','true')}else{b.removeAttribute('aria-current')}});}
+    var qw=t.querySelector('.qwrap');function go(k){var h0=qw.offsetHeight;i=(k+figs.length)%figs.length;figs.forEach(function(f,n){f.classList.toggle('on',n===i);f.setAttribute('aria-hidden',String(n!==i))});dots.querySelectorAll('button').forEach(function(b,n){b.classList.toggle('on',n===i);if(n===i){b.setAttribute('aria-current','true')}else{b.removeAttribute('aria-current')}});
+      // smoothly resize to the new quote
+      qw.style.height='auto';var h1=qw.offsetHeight;
+      if(h0&&h0!==h1){qw.style.height=h0+'px';void qw.offsetHeight;qw.style.height=h1+'px';clearTimeout(qw._t);qw._t=setTimeout(function(){qw.style.height='auto'},450)}else{qw.style.height='auto'}
+    }
     t.querySelectorAll('.ring').forEach(function(a){a.onclick=function(){go(i+Number(a.dataset.dir))}});
     go(3);
   }
