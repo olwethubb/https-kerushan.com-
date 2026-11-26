@@ -91,7 +91,7 @@ body.at-home.scrolled .hd,body.menu-open .hd{background:rgba(20,10,7,.97);box-sh
   .mnav.open{display:flex}
   .mnav a{color:#fff;text-decoration:none;font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:.02em;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
   .mnav a.on{color:var(--or)}
-  .mnav .btn{margin-top:20px;align-self:flex-start;border-bottom:2px solid}
+  .mnav .btn{margin-top:20px;align-self:flex-start;border-bottom:2px solid;padding:12px 30px 12px 32px}
 }
 
 /* ---------- pages ---------- */
