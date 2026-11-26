@@ -1,6 +1,7 @@
 /* Homepage animations (classes added by js/anim.js; nothing is hidden if JS doesn't run) */
 
 /* hero headline: letter by letter */
+.anim .hero .wd{display:inline-block;white-space:nowrap}
 .anim .hero .ch{display:inline-block;opacity:0;translate:0 .5em;rotate:12deg;transition:opacity .5s ease,translate .6s cubic-bezier(.2,.8,.2,1),rotate .6s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--c) * 45ms + 200ms)}
 .anim .hero.go .ch{opacity:1;translate:none;rotate:none}
 

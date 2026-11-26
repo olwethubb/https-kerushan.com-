@@ -10,11 +10,17 @@
   var hero=home.querySelector('.hero');
   var n=0;
   hero.querySelectorAll('.hx .l').forEach(function(l){
+    // letters are grouped per word so a word never breaks mid-way ("DIGITA L.")
     var f=document.createDocumentFragment();
-    l.textContent.split('').forEach(function(ch){
-      var s=document.createElement('span');s.className='ch';s.textContent=ch;
-      if(ch===' ')s.style.whiteSpace='pre';
-      s.style.setProperty('--c',n++);f.appendChild(s);
+    l.textContent.split(/(\s+)/).forEach(function(part){
+      if(!part)return;
+      if(/^\s+$/.test(part)){f.appendChild(document.createTextNode(' '));return}
+      var w=document.createElement('span');w.className='wd';
+      part.split('').forEach(function(ch){
+        var s=document.createElement('span');s.className='ch';s.textContent=ch;
+        s.style.setProperty('--c',n++);w.appendChild(s);
+      });
+      f.appendChild(w);
     });
     l.textContent='';l.appendChild(f);
   });
