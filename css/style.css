@@ -403,7 +403,7 @@ fieldset{border:0;margin:0;padding:0}
   /* hero: copy first, then the locked banner + portrait */
   .hero{min-height:0;display:flex;flex-direction:column}
   .hero-in{order:1;padding:120px 20px 36px}
-  .hero h1{font-size:clamp(36px,11vw,76px);line-height:.76;margin-left:-2px}
+  .hero h1{font-size:clamp(36px,11vw,76px);line-height:.88;margin-left:-2px}
   .hero-artwrap{position:relative;order:2;inset:auto;width:100%;aspect-ratio:3990/3198}
   .hero-art{width:200%;left:auto;right:0}
   .hx .l{display:inline}
@@ -440,7 +440,7 @@ fieldset{border:0;margin:0;padding:0}
   .ts{padding:calc(var(--t) * 121 + 5px) 20px 0;display:flex;flex-direction:column}
   .tst{width:auto}
   .qwrap{padding:0 36px}
-  .ts .art{position:relative;right:auto;bottom:auto;width:min(86%,440px);margin:0 -20px 32px auto}
+  .ts .art{position:relative;right:auto;bottom:auto;width:min(86%,440px);margin:24px auto 32px}
   .ft{padding:56px 20px 190px;background-size:200% auto;background-position:right bottom}
   .ft .cols{grid-template-columns:1fr 1fr;gap:40px 24px}
   .ft .brand{grid-column:1/-1;padding:0}
