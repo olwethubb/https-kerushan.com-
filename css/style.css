@@ -437,10 +437,10 @@ fieldset{border:0;margin:0;padding:0}
   .cm .txt{max-width:none}
   .nl{flex-direction:column;padding:calc(var(--t) * 150 + 36px) 20px calc(var(--t) * 170 + 48px);min-height:0}
   .nl .btn{margin-top:0}
-  .ts{padding:calc(var(--t) * 186 + 56px) 20px 0;display:flex;flex-direction:column}
+  .ts{padding:calc(var(--t) * 186 + 8px) 20px 0;display:flex;flex-direction:column}
   .tst{width:auto}
   .qwrap{padding:0 36px}
-  .ts .art{position:relative;right:auto;bottom:auto;width:min(86%,440px);margin:36px -20px 0 auto}
+  .ts .art{position:relative;right:auto;bottom:auto;width:min(86%,440px);margin:0 -20px 32px auto}
   .ft{padding:56px 20px 190px;background-size:200% auto;background-position:right bottom}
   .ft .cols{grid-template-columns:1fr 1fr;gap:40px 24px}
   .ft .brand{grid-column:1/-1;padding:0}
