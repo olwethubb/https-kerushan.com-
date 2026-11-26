@@ -21,14 +21,19 @@
   hero.style.setProperty('--letters',n);
   hero.querySelectorAll('.eb, .lede, .ctas, .hero-art img').forEach(function(el){el.classList.add('fx')});
 
-  // other sections: headings, eyebrows, main images and stats only
-  var KEY='.stats > div, .bv .eb, .bv .hx .l, .piece, .thumb, .show .eb, .show .hx .l, .show .art, .pr .pcard, .pr .eb, .pr .hx .l, .roles img, .hum .art, .hum .eb, .hum .hx .l, .cm .eb, .cm .hx .l, .cm .strip, .nl .hx, .ts .art, .ts .eb';
-  var items=[].slice.call(home.querySelectorAll(KEY));
+  // other sections: key elements only. Stats bar and newsletter stay static.
+  // sf = soft fade, sl = slide in from the side (text from left, images from right)
+  var FADE='.show .eb, .show .hx .l, .show .art, .hum .art, .hum .eb, .hum .hx .l, .ts .art, .ts .eb';
+  var SLIDE='.bv .eb, .bv .hx .l, .piece, .thumb, .pr .pcard, .pr .eb, .pr .hx .l, .roles img, .cm .eb, .cm .hx .l, .cm .strip';
+  var IMG='.piece, .thumb, .pcard, .roles img, .strip, .art';
+  var items=[].slice.call(home.querySelectorAll(FADE+','+SLIDE));
   var groups=new Map();
   items.forEach(function(el){
-    var g=el.closest('.stats, .hb, .vc, .show, .pod, .roles, .hum, .cm, .nl, .ts')||home;
+    var g=el.closest('.hb, .vc, .show, .pod, .roles, .hum, .cm, .ts')||home;
     var i=groups.get(g)||0; groups.set(g,i+1);
-    el.classList.add('sf'); el.style.setProperty('--i',i);
+    if(el.matches(SLIDE)){el.classList.add('sl', el.matches(IMG)?'from-r':'from-l')}
+    else el.classList.add('sf');
+    el.style.setProperty('--i',i);
   });
 
   // reveal on scroll (position check: works for every element type)

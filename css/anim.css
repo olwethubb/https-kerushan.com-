@@ -14,4 +14,11 @@
 .anim .sf{opacity:0;transition:opacity 1.3s ease;transition-delay:calc(min(var(--i), 8) * 110ms)}
 .anim .sf.in{opacity:1}
 
-@media (prefers-reduced-motion:reduce){.anim .hero .ch,.anim .hero .fx,.anim .sf{opacity:1!important;translate:none!important;rotate:none!important;transition:none!important}}
+/* slide in from the sides: text from the left, images from the right */
+.anim .sl{opacity:0;transition:opacity .85s cubic-bezier(.2,.7,.2,1),translate .85s cubic-bezier(.2,.7,.2,1);transition-delay:calc(min(var(--i), 8) * 90ms)}
+.anim .sl.from-l{translate:-70px 0}
+.anim .sl.from-r{translate:90px 0}
+.anim .sl.in{opacity:1;translate:none}
+.anim .pr,.anim .cm,.anim .bv{overflow-x:clip}
+
+@media (prefers-reduced-motion:reduce){.anim .hero .ch,.anim .hero .fx,.anim .sf,.anim .sl{opacity:1!important;translate:none!important;rotate:none!important;transition:none!important}}
