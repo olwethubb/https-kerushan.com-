@@ -2,7 +2,7 @@
   --or:#FF4800; --or-d:#B63E10; --dark:#140A07; --paper:#EDE7DD; --cream:#F6F1E8;
   --ink:#140A07; --body:#2A201A; --muted:#5E5248;
   --sans:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --p:min(calc(100vw / 1440), 1.3334px);
+  --p:calc(100vw / 1440);
   --t:max(var(--p), .42px);
   --pad:max(20px, calc(64 * var(--p)));
   --img-paper:url(../assets/images/paper-texture.webp);
@@ -17,7 +17,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 html{background:#140A07}
-body{max-width:1920px;margin:0 auto;font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--or);outline-offset:3px}
@@ -99,7 +99,7 @@ body.at-home.scrolled .hd,body.menu-open .hd{background:rgba(20,10,7,.97);box-sh
 
 /* ================= HOME ================= */
 /* hero */
-.hero{position:relative;margin-top:-84px;background:#1A0B06;color:#fff;overflow:hidden;min-height:calc(min(100vw, 1920px) * 3198 / 7980)}
+.hero{position:relative;margin-top:-84px;background:#1A0B06;color:#fff;overflow:hidden;min-height:calc(100vw * 3198 / 7980)}
 .hero-artwrap{position:absolute;inset:0;overflow:hidden}
 .hero-art{position:absolute;left:0;bottom:0;width:100%;aspect-ratio:7980/3198;background:var(--img-hero) center/100% 100% no-repeat}
 .hero-art img{position:absolute;left:54%;bottom:0;width:36%;height:auto}
