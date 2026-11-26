@@ -485,7 +485,7 @@ fieldset{border:0;margin:0;padding:0}
 /* home book image is a link: zoom on hover so it reads as clickable */
 a.piece{display:block;cursor:pointer}
 a.piece .pbg{transition:scale .45s cubic-bezier(.2,.7,.2,1),filter .45s}
-a.piece:hover .pbg,a.piece:focus-visible .pbg{scale:1.06;filter:drop-shadow(0 16px 22px rgba(20,10,7,.35))}
+a.piece:hover .pbg,a.piece:focus-visible .pbg{scale:1.03;filter:drop-shadow(0 16px 22px rgba(20,10,7,.35))}
 a.piece:focus-visible{outline:3px solid var(--or);outline-offset:6px}
 @media (prefers-reduced-motion:reduce){a.piece .pbg{transition:none}}
 
