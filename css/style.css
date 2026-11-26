@@ -500,9 +500,11 @@ a.piece:focus-visible{outline:3px solid var(--or);outline-offset:6px}
   .ts{padding-bottom:48px}
 }
 
-/* testimonials: box fits the quote that is showing (all screen sizes) */
-.tst figure:not(.on){display:none}
-.tst figure.on{animation:ts-in .45s ease}
-.tst .qwrap{overflow:hidden;transition:height .4s cubic-bezier(.2,.7,.2,1)}
+/* testimonials on phones: box fits the quote that is showing (desktop keeps fixed height) */
+@media (max-width:899px){
+  .tst figure:not(.on){display:none}
+  .tst figure.on{animation:ts-in .45s ease}
+  .tst .qwrap{overflow:hidden;transition:height .4s cubic-bezier(.2,.7,.2,1)}
+}
 @keyframes ts-in{from{opacity:0}}
 @media (prefers-reduced-motion:reduce){.tst .qwrap{transition:none}.tst figure.on{animation:none}}
