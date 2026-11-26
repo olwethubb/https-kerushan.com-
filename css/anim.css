@@ -1,11 +1,11 @@
 /* Homepage animations (classes added by js/anim.js; nothing is hidden if JS doesn't run) */
 
 /* hero headline: letter by letter */
-.anim .hero .ch{display:inline-block;opacity:0;translate:0 .5em;rotate:12deg;transition:opacity .5s ease,translate .6s cubic-bezier(.2,.8,.2,1),rotate .6s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--c) * 28ms + 150ms)}
+.anim .hero .ch{display:inline-block;opacity:0;translate:0 .5em;rotate:12deg;transition:opacity .5s ease,translate .6s cubic-bezier(.2,.8,.2,1),rotate .6s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--c) * 45ms + 200ms)}
 .anim .hero.go .ch{opacity:1;translate:none;rotate:none}
 
 /* rest of the hero: soft fade once the headline is mostly built */
-.anim .hero .fx{opacity:0;transition:opacity 1.3s ease;transition-delay:calc(var(--letters) * 28ms * .6)}
+.anim .hero .fx{opacity:0;transition:opacity 1.3s ease;transition-delay:calc(var(--letters) * 45ms * .7)}
 .anim .hero .eb.fx{transition-delay:0s}
 .anim .hero .hero-art img.fx{transition-delay:.3s}
 .anim .hero.go .fx{opacity:1}

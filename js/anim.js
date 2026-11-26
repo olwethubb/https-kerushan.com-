@@ -50,5 +50,8 @@
   }
   function req(){if(!busy){busy=true;requestAnimationFrame(check)}}
   addEventListener('scroll',req,{passive:true});addEventListener('resize',req);
-  requestAnimationFrame(function(){hero.classList.add('go');requestAnimationFrame(check)});
+  // let the browser paint the hidden letters first, otherwise they appear all at once
+  void hero.offsetWidth;
+  setTimeout(function(){hero.classList.add('go')},120);
+  requestAnimationFrame(function(){requestAnimationFrame(check)});
 })();
