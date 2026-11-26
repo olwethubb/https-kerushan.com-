@@ -488,3 +488,17 @@ a.piece .pbg{transition:scale .45s cubic-bezier(.2,.7,.2,1),filter .45s}
 a.piece:hover .pbg,a.piece:focus-visible .pbg{scale:1.06;filter:drop-shadow(0 16px 22px rgba(20,10,7,.35))}
 a.piece:focus-visible{outline:3px solid var(--or);outline-offset:6px}
 @media (prefers-reduced-motion:reduce){a.piece .pbg{transition:none}}
+
+/* testimonials on phones: quote marks above/below so the quote uses the full width */
+@media (max-width:899px){
+  .tst blockquote,.tst figure.mid blockquote,.tst figure.long blockquote{padding:46px 0 46px;font-size:15px;line-height:1.4;letter-spacing:.06em}
+  .tst figure.long blockquote{font-size:14px}
+  .tst blockquote::before{left:0;top:0;width:40px}
+  .tst blockquote::after{right:0;bottom:0;top:auto;width:40px}
+  .tst figcaption{margin-top:6px}
+  .tctl{margin-left:0;margin-top:28px}
+  .ts{padding-bottom:48px}
+  .tst figure:not(.on){display:none}
+  .tst figure.on{animation:ts-in .45s ease}
+}
+@keyframes ts-in{from{opacity:0}}
